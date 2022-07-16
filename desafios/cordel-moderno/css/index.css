@@ -72,10 +72,6 @@ section.image p {
     background: rgba(0, 0, 0, 0.205);
 }
 
-section#img01 {
-    background: url(../imagens/._background001.jpg);
-}
-
 footer {
     background: black ;
     color: white;
