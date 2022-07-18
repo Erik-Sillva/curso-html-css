@@ -4,6 +4,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -64,6 +65,9 @@ section.normal {
 section.image {
     background-color: rgba(0, 0, 0, 0.603);
     color: white;
+    box-shadow: inset 6px 6px 13px 0 rgba(0, 0, 0, 0.452);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -71,11 +75,13 @@ section.image > p {
     width: 400px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.384);
+    text-shadow: 1px 1px 1px black;
     display: inline-block;
 }
 
-section #img01 {
+section#img01 {
     background-image: url('../imagens/background001.jpg');
+    background-position: right center;
     
 }
 
