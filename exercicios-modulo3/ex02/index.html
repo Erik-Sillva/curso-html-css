@@ -5,9 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
+
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        ul {
+            width: 20vw;
+            padding: 10px;
+            border: 1px solid #00000057;
+            background-color: rgba(0, 0, 0, 0.295);
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 1em;
+            font-weight: bold;
+            color: #201f1f;
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+
+        #verde {
+            color: greenyellow;
+        }
+
+        #amarelo {
+            color: yellow;
+        }
+
+        #vermelho {
+            color: red;
+        }
+
+        table {
+            border: 1px solid #000000;
+            width: 400px;
+            height: 400px;
+            border-collapse: collapse;
+            text-align: center ;
+        }
+
+        td {
+            border: 1px solid #000000;
+            padding: 8px;
+        }
+
+        .pago {
+            background-color: #adff2f;
+        }
+
+        .parcelado {
+            background-color: #ffff00;
+        }
+
+        .pendente {
+            background-color: #ff0000;
+        }
+
+        .number {
+            text-align: right;
+        }
+        </style>
 </head>
 <body>
     <h1>Minha primeira tabela</h1>
-    
+    <ul>
+        <li>Pagos: <span id="verde">verde</span></li>
+        <li>Parcelados: <span id="amarelo">amarelo</span></li>
+        <li>Pendentes: <span id="vermelho">vermelho</span></li>
+    </ul>
+
+    <!--
+        HIERARQUIA DE TABELAS (simples)
+        TABLE (table) = Tabela 
+            TABLE ROW (tr) = Linha de tabela 
+                TABLE HEADER (th) = Cabeçalho de tabela
+                TABLE DATA (td) = Dado de tabela
+
+                PAGOS: (A1, C2, B3, C4) VERDE
+                PARCELADOS: (C1, A2, C3, B4) AMARELO
+                PENDENTES: (B1, B2, A3, A4) VERMELHO
+    -->
+
+    <table>
+        <tr>
+            <td class="pago">A1</td>
+            <td class="pendente">B1</td>
+            <td class="parcelado">C1</td>
+        </tr>
+
+        <tr>
+            <td class="parcelado">A2</td>
+            <td class="pendente">B2</td>
+            <td class="pago number">C2</td>
+        </tr>
+
+        <tr>
+            <td class="pendente">A3</td>
+            <td class="pago">B3</td>
+            <td class="parcelado number">C3</td>
+        </tr>
+
+        <tr>
+            <td class="pendente">A4</td>
+            <td class="parcelado">B4</td>
+            <td class="pago">C4</td>
+        </tr>
+    </table>
 </body>
 </html>
