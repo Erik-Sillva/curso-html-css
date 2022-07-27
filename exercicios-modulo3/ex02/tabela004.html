@@ -27,6 +27,14 @@
             border: 1px solid black;
             padding: 10px;
         }
+
+        col.cnome {
+            background-color: yellow;
+        }
+
+        col.cidade {
+            background-color: red;
+        }
     </style>
 </head>
 
@@ -34,6 +42,12 @@
     <table>
         <caption>Cadastro</caption>
         <thead>
+            <colgroup>
+                <col class="cnome">
+                <col class="csexo">
+                <col class="cidade" span="2">
+                <col class="cprof">
+            </colgroup>
             <tr>
                 <th scope="col">Nome</th>
                 <th scope="col">Sexo</th>
