@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 02</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        div input {
+            width: 15em;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        div#containerbutton {
+            display: flex;
+            flex-direction: row;
+        }
+
+        div input.button {
+            width: 5em;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <div>
+            <label for="iusu">Usuário</label>
+            <input type="text" placeholder="Usuário" required minlength="4" maxlength="30" autocomplete="username" name="usuario" id="iusu">
+        </div>
+
+        <div>
+            <label for="ipassword">Senha</label>
+            <input type="password" placeholder="Senha" required minlength="6" maxlength="20" autocomplete="current-password" name="password" id="ipassword">
+        </div>
+
+        <div id="containerbutton">
+            <input type="submit" value="Enviar" class="button">
+            <input type="reset" value="Limpar" class="button">
+        </div>
+    </form>
+</body>
+</html>
