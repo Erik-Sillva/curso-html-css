@@ -4,9 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        background: rgba(128, 128, 128, 0.39);        }
+
+        body h1 {
+            margin: 1em auto;
+        }
+
+        form {
+            width: 30vw;
+            height: 50vh;
+            border: 1px solid rgba(0, 0, 0, 0.349);
+            background: #fff;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        form div {
+            width: 20vw;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form div label {
+            margin: .2em 0;
+            font-weight: bold;
+        }
+
+        form div input {
+            width: 20em;
+            padding: 5px;
+            margin-bottom: .2em;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.288);
+        }
+
+        form div input.button {
+            width: 5em;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        form div div#container-button {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
 </head>
 <body>
+
+    <h1>Dados Pessoais</h1>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <div>
+            <label for="inome">Nome Completo</label>
+            <input type="text" name="nome" id="inome" autocomplete="name" required placeholder="Digite seu nome completo aqui">
+
+            <label for="iemail">Email</label>
+            <input type="email" name="email" id="iemail" autocomplete="email" required placeholder="Endereço de Email">
+
+            <label for="ipass">Senha</label>
+            <input type="password" name="senha" id="ipass" autocomplete="new-password" required placeholder="Digite sua senha aqui">
+
+            <label for="itel">Telefone</label>
+            <input type="tel" name="tel" id="itel" pattern="^\(\d{2}\)[0-9]{4,5}-[0-9]{4}$" required autocomplete="tel" placeholder="(00) 0000-0000">
+
+            <div id="container-button">
+                <input type="submit" value="Enviar" class="button">
+                <input type="reset" value="Limpar" class="button">
+            </div>
+        </div>
+    </form>
     
 </body>
 </html>
