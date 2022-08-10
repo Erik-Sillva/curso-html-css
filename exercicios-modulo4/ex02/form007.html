@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        background: rgba(128, 128, 128, 0.39);        }
+
+        body h1 {
+            margin: 1em auto;
+        }
+
+        form {
+            width: 30vw;
+            height: 50vh;
+            border: 1px solid rgba(0, 0, 0, 0.349);
+            background: #fff;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        form div {
+            width: 20vw;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form div label {
+            margin: .2em 0;
+            font-weight: bold;
+        }
+
+        form div input {
+            width: 20em;
+            padding: 5px;
+            margin-bottom: .2em;
+            border-radius: 5px;
+            border: 1px solid #00000049;
+        }
+
+        form div select#iestado {
+            border: 1px solid #00000056;
+        }
+
+        form div input.button {
+            width: 5em;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        form div div#container-button {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exemplo de Formulário</h1>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <div>
+            <label for="iest">Estado</label>
+
+            <select name="estado" id="iestado">
+
+                <option value="selecione" selected disabled>Selecione</option>
+
+                <optgroup label="Região Norte">
+                    <option value="AC">Acre</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="PA">Pará</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+
+                <optgroup label="Região Sudeste">
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="AL">Alagoas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PI">Piauí</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+
+                <optgroup label="Região Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+            </select>
+
+            <div>
+                <label for="iprof">Profissão</label>
+                <input type="text" name="prof" id="iprof" list="listprof">
+                <datalist id="listprof">
+                    <option value="ADM">Administrador</option>
+                    <option value="CONT">Contabilista</option>
+                    <option value="DEV">Desenvolvedor</option>
+                    <option value="PROF">Professor</option>
+                </datalist>
+            </div>
+
+            <div id="container-button">
+                <input type="submit" value="Enviar" class="button">
+                <input type="reset" value="Limpar" class="button">
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>
