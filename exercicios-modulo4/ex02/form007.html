@@ -58,6 +58,17 @@
 
         form div select#iestado {
             border: 1px solid #00000056;
+            padding: 5px;
+        }
+
+        form div textarea {
+
+            max-width: 280px;
+            min-width: 280px;
+            max-height: 180px;
+            min-height: 180px;
+            border: 1px solid #00000056;
+            padding: 5px;
         }
 
         form div input.button {
@@ -80,9 +91,9 @@
         <div>
             <label for="iest">Estado</label>
 
-            <select name="estado" id="iestado">
+            <select name="estado" required id="iestado">
 
-                <option value="selecione" selected disabled>Selecione</option>
+                <option value="selecione" selected disabled >Selecione</option>
 
                 <optgroup label="Região Norte">
                     <option value="AC">Acre</option>
@@ -122,7 +133,7 @@
 
             <div>
                 <label for="iprof">Profissão</label>
-                <input type="text" name="prof" id="iprof" list="listprof">
+                <input type="text" name="prof" id="iprof" list="listprof" required>
                 <datalist id="listprof">
                     <option value="ADM">Administrador</option>
                     <option value="CONT">Contabilista</option>
@@ -130,6 +141,9 @@
                     <option value="PROF">Professor</option>
                 </datalist>
             </div>
+
+            <label for="imsg">Deixe uma mensagem</label>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Digite sua mensagem aqui"></textarea>
 
             <div id="container-button">
                 <input type="submit" value="Enviar" class="button">
