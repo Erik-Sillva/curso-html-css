@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../mq002/css/style.css" media="all">
-    <link rel="stylesheet" href="../mq002/css/retrato.css" media="screen and (orientation:portrait)">
-    <link rel="stylesheet" href="../mq002/css/paisagem.css" media="screen and (orientation:landscape)">
     <title>Media Query</title>
+    <style>
+        /* Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html,body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #233eff;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 0 #1526a7;
+            padding: 10px;
+        }
+        /* Retrato */
+            @media screen and (orientation: portrait){
+                body {
+                    background-image: url(../mq003/img/cev-portrait.jpg);
+                    background-position: center bottom;
+                }
+            }
+
+        /* Paisagem */
+        @media screen and (orientation: landscape) {
+            body {
+                background-image: url(../mq003/img/cev-landscape.jpg);
+                background-position: left bottom;
+            }
+            
+        }
+    </style>
 </head>
 <body>
     <h1>Mude a orientação do seu dispositivo</h1>
