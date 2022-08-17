@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/* Versão geral*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
