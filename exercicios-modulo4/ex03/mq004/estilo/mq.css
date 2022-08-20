@@ -1,6 +1,16 @@
 @charset "UTF-8";
 
-/* Versão geral*/
+/* Todas as demais mídias */
+/* Typical Device Breakingpoints */
+-----------------------------------
+/* 
+Pequenas Telas: 1 a 600px
+Mobile: 601 a 920px
+Tablets: 921 a 1080px
+Desktop: 1080 a 1920px
+Telas Grandes: Acimas de 1920px
+*/
+-----------------------------------
 
 * {
     margin: 0;
