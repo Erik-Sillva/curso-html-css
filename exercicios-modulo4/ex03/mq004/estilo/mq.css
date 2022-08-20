@@ -21,3 +21,78 @@ Telas Grandes: Acimas de 1920px
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
+
+@media print { /* IMPRESSÃO */
+    main {
+        border: 2px solid #000000ab;
+        width: 50vw;
+        max-width: 55vw;
+        min-width: 30vw;
+    }
+
+    main h1 {
+        color: #000000;
+    }
+
+    #print {
+        display: block;
+    }
+    
+    .view,#phone {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 921px) and (max-width:1080px) { /* TABLET */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    main {
+        width: 60vw;
+        max-width: 50vw;
+        min-width: 40vw;
+    }
+
+    #tablet {
+        display: block;
+    }
+    
+    .view,#phone {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1920px) { /* DESKTOP */
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    main {
+        width: 50vw;
+        max-width: 55vw;
+        min-width: 30vw;
+    }
+
+    #pc {
+        display: block;
+    }
+    
+    .view,#phone {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1920px) { /* GRANDES TELAS */
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    #tv {
+        display: block;
+    }
+    
+    .view,#phone {
+        display: none;
+    }
+}
