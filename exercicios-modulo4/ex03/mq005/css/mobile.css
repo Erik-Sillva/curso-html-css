@@ -17,28 +17,52 @@ body, html {
 }
 
 header {
-    background-color: #808080;
+    background-color: #646464;
     text-align: center;
     padding: 10px;
 }
 
 nav {
-    background-color: #000000c0;
-    color: white;
-    padding: 5px;
-    text-align: center;
-}
-
-nav menu ul {
+    background-color: #808080;
+    width: 100%;
     display: flex;
-    align-items: center;
     flex-direction: column;
 }
 
-nav menu ul li {
+nav > menu {
+    display: block;
+    width: 100%;
+    display: none;
+}
+
+nav i {
+    background-color: #252525;
+    color: #fff;
+    display: block;
+    width: 100%;
     padding: 10px;
-    border: 1px solid red;
-    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav i:hover {
+    background-color: white;
+    color: #252525;
+}
+
+nav > menu > ul > li > a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    border-top: 2px solid rgb(129, 129, 129);
+    background-color: rgb(87, 87, 87);
+    color: #fff;
+}
+
+nav > menu > ul > li > a:hover {
+    background-color: gray;
 }
 
 main {
