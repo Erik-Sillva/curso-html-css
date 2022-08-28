@@ -23,7 +23,7 @@ header {
 }
 
 nav {
-    background-color: #808080;
+    background-color: #646464;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -46,8 +46,8 @@ nav i {
 }
 
 nav i:hover {
-    background-color: white;
-    color: #252525;
+    background-color: #252525cb;
+    color: rgba(255, 255, 255, 0.856);
 }
 
 nav > menu > ul > li > a {

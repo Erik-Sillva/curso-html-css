@@ -10,12 +10,20 @@
     list-style: none;
 }
 
-@media screen and (min-width: 768px) and (max-width:920px) {
+@media screen and (min-width: 768px) {
     nav i.fa-bars {
         display: none;
     }
 
+    nav menu#menulist {
+        display: block;
+    }
+
     nav > menu > ul > li {
         display: inline-block;
+    }
+
+    main {
+        width: 50vw;
     }
 }
