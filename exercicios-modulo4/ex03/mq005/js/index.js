@@ -1,8 +1,8 @@
 function mudouTamanho() {
     if(window.innerWidth >= 768) {
-        menulist.style.display = 'block'
+        document.menulist.style.display = 'block'
     } else {
-        menulist.style.display = 'none'
+        document.menulist.style.display = 'none'
     }
 }
 

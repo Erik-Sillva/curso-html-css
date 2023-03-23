@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: #7159c1;
+}
+
+.container {
+    display: grid;  /* Determinando o CSS GRID */
+    grid-template-columns: 3fr 1fr;  /* Determinando q quantidade de colunas e seus tamanhos em fração */
+    grid-template-rows: 20vh 70vh 10vh;  /* Determinando a quantidade de linhas e seus tamanhos em vh */
+    grid-template-areas: "header header"  /* Vai por o header nas duas colunas */
+                          "main aside"    /* Vai por o main nas duas primeiras colunas e o aside na última */
+                          "footer footer"; /* Vai por o footer ocupando as duas colunas */
+}
+
+header {
+    width: 100%;
+    background: yellow;
+    grid-area: header;
+
+    /*
+    grid-column: 1/3;   Shorthand que determina primeiro onde o elemento vai começar e depois terminar
+    grid-row: 3/4;      Shorthand que determina primeiro onde o elemento vai começar e depois terminar
+    */
+
+    /*
+    grid-column-start: 1;   Determina em qual coluna o elemento vai começar
+    grid-column-end: 3;     Determina em qual coluna o elemento vai terminar
+    grid-row-start: 3;      Determina em qual linha o elemento vai começar
+    grid-row-end: 4;        Determina em qual linha o elemento vai terminar
+    */
+}
+
+main {
+    width: 100%;
+    background: blue;
+    grid-area: main;
+
+    /*
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    */
+}
+
+aside {
+    width: 100%;
+    background: green;
+    grid-area: aside;
+
+    /* 
+    grid-column-start: 2;
+    grid-column-end: 3;
+     */
+}
+
+footer {
+    width: 100%;
+    background: red;
+    grid-area: footer;
+
+    /* 
+    grid-column-start: 1;
+    grid-column-end: 3;
+     */
+}

@@ -35,12 +35,12 @@ nav > menu {
 }
 
 nav i {
-    background-color: #252525;
-    color: #fff;
-    display: block;
     width: 100%;
     padding: 10px;
     font-size: 1.2em;
+    background-color: #252525;
+    color: #fff;
+    display: block;
     text-align: center;
     cursor: pointer;
 }
